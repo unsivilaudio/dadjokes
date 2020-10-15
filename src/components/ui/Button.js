@@ -20,7 +20,10 @@ const customButton = props => {
     }
 
     return (
-        <button type={props.btnType || 'button'} className={styles.join(' ')}>
+        <button
+            type={props.btnType || 'button'}
+            className={styles.join(' ')}
+            onClick={props.clicked}>
             {props.label}
         </button>
     );

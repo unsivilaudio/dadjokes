@@ -6,7 +6,6 @@ import JokeList from './list/JokeList';
 const app = props => {
     return (
         <div className={classes.App}>
-            <h1>The App component</h1>
             <JokeList />
         </div>
     );
