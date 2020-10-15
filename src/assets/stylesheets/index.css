@@ -12,14 +12,14 @@
     --button-primary-light: #3aa9dd;
     --button-primary-dark: #298fbe;
 
-    --button-success-light: #3ee04c;
+    --button-success-light: #24db33;
     --button-success-dark: #22b32e;
 
     --button-danger-light: #ec675d;
     --button-danger-dark: #cf3c32;
 
     --shadow-light: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-    --shadow-dark: 0 2px 5px 3px rgba(0, 0, 0, 0.5);
+    --shadow-dark: 0 3px 7px 2px rgba(0, 0, 0, 0.35);
 }
 
 * {
@@ -39,7 +39,7 @@ html {
 }
 
 body::before {
-    background: linear-gradient(to right, #33aadd 50%, #aaf3bb 50%);
+    background: linear-gradient(to right, #59b2d8 50%, #50f7bf 50%);
     content: '';
     position: fixed;
     top: 0;
@@ -53,6 +53,7 @@ body::before {
 
 body {
     position: absolute;
+    width: 100%;
     /* overflow: hidden auto; */
     min-height: 100vh;
     color: var(--color-grey-light-1);

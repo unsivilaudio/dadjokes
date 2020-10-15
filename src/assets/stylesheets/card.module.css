@@ -1,0 +1,12 @@
+.Card {
+    color: inherit;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-light);
+
+    display: flex;
+}
+
+.Column {
+    flex-direction: column;
+}
