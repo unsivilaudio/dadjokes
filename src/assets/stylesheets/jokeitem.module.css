@@ -19,6 +19,10 @@
     transform: scale(1.5) translateY(3px);
 }
 
+.Controls .Icons:first-of-type {
+    padding-left: 0;
+}
+
 .Controls .Icons:hover {
     color: orange;
 }
@@ -30,5 +34,10 @@
 }
 
 .Emoji {
-    justify-self: flex-end;
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.Emoji img {
+    height: 4rem;
 }

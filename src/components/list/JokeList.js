@@ -9,16 +9,17 @@ import Card from '../ui/Card';
 import classes from '../../assets/stylesheets/jokelist.module.css';
 
 class JokeList extends React.Component {
-    state = { jokes: [] };
+    state = { jokes: [], page: 1 };
 
     componentDidMount() {
         this.fetchTenJokes();
     }
 
     fetchTenJokes = async () => {
+        const page = this.state.page || 1;
         try {
             const response = await axios.get(
-                'https://icanhazdadjoke.com/search?limit=10',
+                `https://icanhazdadjoke.com/search?limit=10&page=${page}`,
                 { headers: { Accept: 'application/json' } }
             );
             const jokes = response.data.results.map(el => {
@@ -26,7 +27,7 @@ class JokeList extends React.Component {
                 return el;
             });
             console.log(jokes);
-            this.setState({ jokes });
+            this.setState(prevState => ({ jokes, page: prevState.page + 1 }));
         } catch (err) {
             console.log(err);
         }
