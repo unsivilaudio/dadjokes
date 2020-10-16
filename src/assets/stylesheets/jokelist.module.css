@@ -45,3 +45,9 @@
     margin-top: 0;
     list-style: none;
 }
+
+.FooterAction {
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}

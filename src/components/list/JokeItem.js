@@ -1,5 +1,10 @@
 import React from 'react';
-import { KeyboardArrowDown, KeyboardArrowUp } from '@material-ui/icons';
+import {
+    KeyboardArrowDown,
+    KeyboardArrowUp,
+    Favorite,
+    FavoriteBorder,
+} from '@material-ui/icons';
 
 import emoji from './emoji';
 import Counter from '../ui/Counter';
@@ -19,6 +24,10 @@ const jokeItem = props => {
                 : emoji.negative1
             : emoji.neutral;
 
+    const favStyle = {
+        color: props.favorited ? 'rgba(247,83,110)' : null,
+    };
+
     return (
         <li className={classes.JokeItem}>
             <div className={classes.Controls}>
@@ -34,7 +43,17 @@ const jokeItem = props => {
                     <KeyboardArrowUp fontSize='large' />
                 </div>
             </div>
-            <div className={classes.JokeText}>{props.children}</div>
+            <div className={classes.JokeText}>{props.children} </div>
+            <div
+                className={classes.Favorite}
+                onClick={props.toggleFavorite}
+                style={favStyle}>
+                {props.favorited ? (
+                    <Favorite fontSize='large' />
+                ) : (
+                    <FavoriteBorder fontSize='large' />
+                )}
+            </div>
             <div className={classes.Emoji}>
                 <img src={emojiStyle} alt={`${props.score}-emoji`} />
             </div>
