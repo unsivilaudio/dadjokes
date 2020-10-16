@@ -1,39 +1,5 @@
 .JokeList {
     color: var(--color-grey-dark-1);
-    background: var(--color-grey-light-1);
-    width: 75%;
-    margin: 12.5% auto;
-    margin-bottom: 0;
-    transform: translateY(-18%);
-}
-
-.Content {
-    background: linear-gradient(to bottom, #d1e469, #f7b21e);
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Header {
-    color: var(--color-grey-light-1);
-    text-shadow: 2px 2px 3px var(--color-grey-dark-1);
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 6rem;
-    line-height: 0.6;
-    /* margin-left: 2.5rem; */
-    padding: 1.5rem 2.5rem;
-    display: flex;
-}
-
-.Header span {
-    /* color: var(--color-grey-dark-1); */
-    font-size: 4rem;
-    font-weight: 700;
-    padding: 0.2rem 0;
-    padding-bottom: 0;
-    border-bottom: 4px solid var(--color-grey-dark-1);
 }
 
 .Action {
@@ -47,7 +13,13 @@
 }
 
 .FooterAction {
+    background: linear-gradient(
+        to top,
+        var(--color-grey-light-1) 90%,
+        var(--color-grey-light-2)
+    );
     padding: 0.8rem 1.5rem;
+
     display: flex;
     justify-content: space-between;
 }
