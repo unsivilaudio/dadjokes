@@ -17,7 +17,25 @@ class App extends React.Component {
     };
 
     componentDidMount() {
+        const ratings = JSON.parse(localStorage.getItem('joke_ratings'));
+        const favorites = JSON.parse(localStorage.getItem('joke_favorites'));
+        this.setState({ ratings, favorites });
         this.fetchTenJokes(this.state.page);
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.ratings !== this.state.ratings) {
+            localStorage.setItem(
+                'joke_ratings',
+                JSON.stringify(this.state.ratings)
+            );
+        }
+        if (prevState.favorites !== this.state.favorites) {
+            localStorage.setItem(
+                'joke_favorites',
+                JSON.stringify(this.state.favorites)
+            );
+        }
     }
 
     fetchTenJokes = async page => {
