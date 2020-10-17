@@ -106,6 +106,13 @@ class App extends React.Component {
                         Dad<span>Jokes</span>
                     </h3>
                     <span>
+                        {this.state.showFavorites ? null : (
+                            <Button
+                                label='Sort'
+                                btnStyle='Success'
+                                clicked={this.handleSortRating}
+                            />
+                        )}
                         <Button
                             label={
                                 this.state.showFavorites
@@ -115,16 +122,15 @@ class App extends React.Component {
                             btnStyle='Primary'
                             clicked={this.handleShowFavorites}
                         />
-                        <Button
-                            label='Sort'
-                            btnStyle='Success'
-                            clicked={this.handleSortRating}
-                        />
                     </span>
                 </div>
                 <div className={classes.Content}>
                     {this.state.showFavorites ? (
-                        <FavoritesList items={this.state.favorites} />
+                        <FavoritesList
+                            items={this.state.favorites}
+                            handleFavorite={this.handleToggleFavorite}
+                            toggleList={this.handleShowFavorites}
+                        />
                     ) : (
                         <JokeList
                             favorites={this.state.favorites}

@@ -24,7 +24,7 @@
 }
 
 .Controls .Icons:hover {
-    color: orange;
+    color: var(--icons-color-hover);
 }
 
 .JokeText {
@@ -40,7 +40,7 @@
 
 .Favorite:hover {
     cursor: pointer;
-    color: rgb(247, 83, 110);
+    color: var(--favorite-color-active);
 }
 
 .Favorite svg {

@@ -20,6 +20,10 @@
 
     --shadow-light: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     --shadow-dark: 0 3px 7px 2px rgba(0, 0, 0, 0.35);
+
+    --favorite-color-active: rgb(247, 83, 110);
+    --favorite-color-disabled: rgb(87, 87, 87);
+    --icons-color-hover: rgb(240, 150, 100);
 }
 
 * {

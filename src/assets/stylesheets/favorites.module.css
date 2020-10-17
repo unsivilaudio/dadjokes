@@ -1,3 +1,19 @@
 .Favorites {
+    width: 100%;
+    color: var(--color-grey-dark-2);
     padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Favorites button {
+    align-self: center;
+}
+
+.Header {
+    flex: 1;
+}
+
+.List {
+    list-style: none;
 }

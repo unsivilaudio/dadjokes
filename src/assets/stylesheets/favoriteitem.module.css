@@ -1,0 +1,39 @@
+.FavoriteItem {
+    font-size: 2.2rem;
+    transition: all 0.3s ease;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.FavoriteItem .Icon {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--favorite-color-active);
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    margin: 0;
+    transition: all 0.5s ease 0.5s;
+}
+
+.FavoriteItem:hover .Icon {
+    width: 2rem;
+    margin: 0 1.5rem;
+    opacity: 1;
+}
+
+.Icon:hover {
+    opacity: 0.5;
+    color: var(--favorite-color-disabled);
+}
+
+.Icon svg {
+    transform: scale(1.5);
+}
+
+.Content {
+    flex: 1;
+    padding: 0.7rem 1.5rem;
+}
