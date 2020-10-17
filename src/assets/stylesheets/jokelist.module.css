@@ -2,17 +2,17 @@
     color: var(--color-grey-dark-1);
 }
 
-.Action {
-    position: absolute;
-    right: 2rem;
-}
-
 .List {
     margin-top: 0;
     list-style: none;
 }
 
-.FooterAction {
+.Content {
+    display: flex;
+    flex-direction: column;
+}
+
+.Action {
     background: linear-gradient(
         to top,
         var(--color-grey-light-1) 90%,
@@ -22,4 +22,14 @@
 
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .List {
+        height: 100%;
+    }
+
+    .Action button {
+        flex: 0 1 45%;
+    }
 }

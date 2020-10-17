@@ -65,3 +65,14 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
 }
+
+.simplebar-wrapper {
+    max-height: 50rem;
+}
+
+@media screen and (max-width: 600px) {
+    .simplebar-wrapper {
+        height: auto;
+        max-height: 100%;
+    }
+}

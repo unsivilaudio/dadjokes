@@ -29,31 +29,37 @@ class JokeList extends React.Component {
         return (
             <div className={classes.JokeList}>
                 <Card flex='column'>
-                    <Simplebar style={{ maxHeight: '500px' }}>
-                        <ul className={classes.List}>
-                            {this.renderJokeList()}
-                        </ul>
-                    </Simplebar>
-                    <div className={classes.FooterAction}>
-                        {this.props.page === 1 ? (
-                            <div />
-                        ) : (
+                    <div className={classes.Content}>
+                        <Simplebar>
+                            <ul className={classes.List}>
+                                {this.renderJokeList()}
+                            </ul>
+                        </Simplebar>
+                        <div className={classes.Action}>
+                            {this.props.page === 1 ? (
+                                <div />
+                            ) : (
+                                <Button
+                                    label='Prev Page'
+                                    btnStyle='Primary'
+                                    clicked={() =>
+                                        this.props.fetchPage(
+                                            this.props.page - 1
+                                        )
+                                    }
+                                />
+                            )}
                             <Button
-                                label='Prev Page'
-                                btnStyle='Primary'
+                                label='Next Page'
+                                btnStyle='Success'
+                                disabled={
+                                    this.props.page === this.props.maxPages
+                                }
                                 clicked={() =>
-                                    this.props.fetchPage(this.props.page - 1)
+                                    this.props.fetchPage(this.props.page + 1)
                                 }
                             />
-                        )}
-                        <Button
-                            label='Next Page'
-                            btnStyle='Success'
-                            disabled={this.props.page === this.props.maxPages}
-                            clicked={() =>
-                                this.props.fetchPage(this.props.page + 1)
-                            }
-                        />
+                        </div>
                     </div>
                 </Card>
             </div>

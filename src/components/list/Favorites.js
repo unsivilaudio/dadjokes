@@ -5,6 +5,7 @@ import classes from '../../assets/stylesheets/favorites.module.css';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 import FavItem from './FavItem';
+import emoji from './emoji';
 
 const favorites = props => {
     const renderFavsList = () => {
@@ -24,15 +25,20 @@ const favorites = props => {
     return (
         <Card>
             <div className={classes.Favorites}>
-                <h1 className={classes.Header}>The Favorites Component</h1>
-                <Simplebar style={{ maxHeight: '500px' }}>
-                    <ul className={classes.List}>{renderFavsList()}</ul>
-                </Simplebar>
-                <Button
-                    label='Go Back'
-                    btnStyle='Primary'
-                    clicked={props.toggleList}
-                />
+                <h1 className={classes.Header}>
+                    <img src={emoji.favorite} alt='heart-emoji' />
+                    <p>Your personal favorites</p>
+                </h1>
+                <div className={classes.Content}>
+                    <Simplebar>
+                        <ul className={classes.List}>{renderFavsList()}</ul>
+                    </Simplebar>
+                    <Button
+                        label='Go Back'
+                        btnStyle='Danger'
+                        clicked={props.toggleList}
+                    />
+                </div>
             </div>
         </Card>
     );

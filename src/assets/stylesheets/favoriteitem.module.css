@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+.FavoriteItem:not(:last-of-type) {
+    border-bottom: 2px solid var(--color-grey-light-2);
+}
+
 .FavoriteItem .Icon {
     display: inline-block;
     cursor: pointer;
@@ -36,4 +40,35 @@
 .Content {
     flex: 1;
     padding: 0.7rem 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .FavoriteItem {
+        font-size: 1.8rem;
+    }
+
+    .FavoriteItem .Icon {
+        width: 2.2rem;
+        opacity: 1;
+        margin: 0 0.8rem;
+    }
+
+    .FavoriteItem:hover .Icon {
+        width: 2.2rem;
+        margin: 0 0.8rem;
+    }
+
+    .Icon:active {
+        opacity: 0.5;
+        color: var(--favorite-color-disabled);
+    }
+
+    .Icon svg {
+        transform: scale(2);
+    }
+
+    .Content {
+        flex: 1;
+        padding: 0.5rem 1.2rem;
+    }
 }
