@@ -17,8 +17,9 @@ class App extends React.Component {
     };
 
     componentDidMount() {
-        const ratings = JSON.parse(localStorage.getItem('joke_ratings'));
-        const favorites = JSON.parse(localStorage.getItem('joke_favorites'));
+        const ratings = JSON.parse(localStorage.getItem('joke_ratings')) || {};
+        const favorites =
+            JSON.parse(localStorage.getItem('joke_favorites')) || [];
         this.setState({ ratings, favorites });
         this.fetchTenJokes(this.state.page);
     }
