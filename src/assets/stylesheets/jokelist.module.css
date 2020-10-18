@@ -1,16 +1,35 @@
 .JokeList {
     color: var(--color-grey-dark-1);
-    background: var(--color-grey-light-1);
-    width: 60%;
-    margin: 0 auto;
 }
 
-.Header {
-    margin-left: 2.5rem;
-    font-size: 3rem;
-    font-weight: 300;
+.List {
+    margin-top: 0;
+    list-style: none;
 }
 
 .Content {
-    padding: 0.8rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Action {
+    background: linear-gradient(
+        to top,
+        var(--color-grey-light-1) 90%,
+        var(--color-grey-light-2)
+    );
+    padding: 0.8rem 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .List {
+        height: 100%;
+    }
+
+    .Action button {
+        flex: 0 1 45%;
+    }
 }

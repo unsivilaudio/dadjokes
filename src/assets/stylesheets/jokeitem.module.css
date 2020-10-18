@@ -1,0 +1,57 @@
+.JokeItem {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--color-grey-light-2);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Controls {
+    display: flex;
+    align-items: center;
+}
+
+.Controls .Icons {
+    cursor: pointer;
+    padding: 0 1rem;
+    transform: scale(1.6) translateY(3px);
+}
+
+.Controls .Icons:first-of-type {
+    padding-left: 0;
+}
+
+.Controls .Icons:hover {
+    color: var(--icons-color-hover);
+}
+
+.JokeText {
+    flex: 1;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.Favorite {
+    margin-left: 2rem;
+    transition: all 0.5s ease;
+}
+
+.Favorite:hover {
+    cursor: pointer;
+    color: var(--favorite-color-active);
+}
+
+.Favorite svg {
+    transform: scale(1.6);
+}
+
+.Emoji {
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.Emoji img {
+    height: 4rem;
+}

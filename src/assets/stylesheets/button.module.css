@@ -50,3 +50,11 @@
 .Danger:hover {
     background: var(--button-danger-dark);
 }
+
+.Disabled,
+.Disabled:hover {
+    cursor: not-allowed;
+    transform: translate(0);
+    box-shadow: var(--shadow-light);
+    background: var(--color-grey-dark-1);
+}

@@ -19,8 +19,14 @@ const customButton = props => {
             break;
     }
 
+    if (props.disabled) styles.push(classes.Disabled);
+
     return (
-        <button type={props.btnType || 'button'} className={styles.join(' ')}>
+        <button
+            type={props.btnType || 'button'}
+            className={styles.join(' ')}
+            onClick={props.clicked}
+            disabled={props.disabled}>
             {props.label}
         </button>
     );
