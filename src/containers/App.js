@@ -105,7 +105,7 @@ class App extends React.Component {
                     <h3 className={classes.Header}>
                         Dad<span>Jokes</span>
                     </h3>
-                    <span>
+                    <span className={classes.Actions}>
                         {this.state.showFavorites ? null : (
                             <Button
                                 label='Sort'
